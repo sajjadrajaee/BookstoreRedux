@@ -1,17 +1,17 @@
 import React from 'react';
 
-function Book() {
+const Book = (props) => {
+  // eslint-disable-next-line react/prop-types
+  const { bookProps } = props;
   return (
-    <>
-      <div>
-        title
-      </div>
-      <div>
-        Author
-      </div>
-      <button type="submit"> Delete</button>
-    </>
+    <div>
+      {/* eslint-disable-next-line react/prop-types */}
+      <p>{bookProps.title}</p>
+      {/* eslint-disable-next-line react/prop-types */}
+      <p>{bookProps.author}</p>
+      <button type="button">Delete</button>
+    </div>
   );
-}
+};
 
 export default Book;
